@@ -33,14 +33,12 @@ class LibraryTest < Minitest::Test
 
     dpl.add_to_collection(jane_eyre)
 
-    assert_instance_of Book, dpl.books
+    assert_equal jane_eyre, dpl.books.flatten
+
+    dpl.add_to_collection(mockingbird)
+    dpl.add_to_collection(villette)
+
+    assert_equal [jane_eyre, mockingbird, villette], dpl.books
   end
 
 end
-
-
-#
-# > dpl.add_to_collection(mockingbird)
-# > dpl.add_to_collection(villette)
-# > dpl.books
-# # => [#<Book:0x007f98a9c6ace8...>, #<Book:0x007fb410e8e1f0...>, #<Book:0x007fb410ea56e8...>]

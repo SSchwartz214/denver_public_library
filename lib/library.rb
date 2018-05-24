@@ -6,7 +6,7 @@ class Library
   end
 
   def add_to_collection(title)
-    @books << book
+    @books << title
   end
 
 end
