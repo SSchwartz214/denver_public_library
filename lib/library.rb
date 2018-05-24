@@ -19,15 +19,15 @@ class Library
     "book.author_first_name + book.author_last_name"
   end
 
-  def find_by_author
+  def find_by_author(author)
     @books.find_all do |book|
-      author_name(author) == "Charlotte Bronte"
+      author_name(author) == author
     end
   end
 
-  def find_by_publication_date
+  def find_by_publication_date(publication_date)
     @books.find_all do |book|
-      book.publication_date == "1960"
+      book.publication_date == publication_date
     end
   end
 
