@@ -10,8 +10,8 @@ class Library
   end
 
   def card_catalogue
-    @books.map do |book|
-      book.last_name.sort
+    @books.flatten.map do |book|
+      book.author_last_name.sort
     end
   end
 

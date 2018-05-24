@@ -44,6 +44,7 @@ class LibraryTest < Minitest::Test
   end
 
   def test_it_can_retrieve_information_about_collection
+    skip
     dpl = Library.new
 
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
